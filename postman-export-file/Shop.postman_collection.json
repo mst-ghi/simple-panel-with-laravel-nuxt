@@ -1,0 +1,2375 @@
+{
+	"info": {
+		"_postman_id": "0e23fdf4-c065-46ca-82a4-8ff892e52877",
+		"name": "Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "Attribute",
+					"item": [
+						{
+							"name": "Group",
+							"item": [
+								{
+									"name": "List",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/attributes/groups?per_page=20",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"attributes",
+												"groups"
+											],
+											"query": [
+												{
+													"key": "per_page",
+													"value": "20"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Store",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "category_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "title",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "status",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/panel/attributes/groups",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"attributes",
+												"groups"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "category_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "title",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "status",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/panel/attributes/groups/:group_id",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"attributes",
+												"groups",
+												":group_id"
+											],
+											"variable": [
+												{
+													"key": "group_id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Destroy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/attributes/groups/:group_id",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"attributes",
+												"groups",
+												":group_id"
+											],
+											"variable": [
+												{
+													"key": "group_id",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Attribute",
+							"item": [
+								{
+									"name": "List",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/attributes",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"attributes"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Store",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "attribute_group_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "type",
+													"value": "text",
+													"type": "text"
+												},
+												{
+													"key": "title",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "slug",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "status",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/panel/attributes",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"attributes"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "attribute_group_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "type",
+													"value": "text",
+													"type": "text"
+												},
+												{
+													"key": "title",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "slug",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "status",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/panel/attributes/:attribute_id",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"attributes",
+												":attribute_id"
+											],
+											"variable": [
+												{
+													"key": "attribute_id",
+													"value": "",
+													"type": "string"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Destroy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/attributes/:attribute_id",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"attributes",
+												":attribute_id"
+											],
+											"variable": [
+												{
+													"key": "attribute_id",
+													"value": "1",
+													"type": "string"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/panel/products?per_page=20",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"products"
+									],
+									"query": [
+										{
+											"key": "per_page",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/panel/categories",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Store",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "parent_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "testttdfgdf",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "lfknvdlkfvdrgfds",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/panel/categories",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "slug",
+											"value": "testttdfgdf",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "lfknvdlkfvdrgfds",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "21",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/panel/categories/:category_di",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"categories",
+										":category_di"
+									],
+									"variable": [
+										{
+											"key": "category_di",
+											"value": "1",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Destroy",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/panel/categories/:category_id",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"categories",
+										":category_id"
+									],
+									"variable": [
+										{
+											"key": "category_id",
+											"value": "2",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Brand",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/panel/brands",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"brands"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Store",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "slug",
+											"value": "testttdfgdf",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "lfknvdlkfvdrgfds",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/Mostafa/Pictures/Screenshots/Screenshot (27).png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/panel/brands",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"brands"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "slug",
+											"value": "testttdfgdf",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "lfknvdlkfvdrgfds",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/panel/brands/:brand_id",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"brands",
+										":brand_id"
+									],
+									"variable": [
+										{
+											"key": "brand_id",
+											"value": "1",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Destroy",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/panel/brands/:brand_id",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"brands",
+										":brand_id"
+									],
+									"variable": [
+										{
+											"key": "brand_id",
+											"value": "1",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Location",
+					"item": [
+						{
+							"name": "Province",
+							"item": [
+								{
+									"name": "List",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/provinces?per_page=20",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"provinces"
+											],
+											"query": [
+												{
+													"key": "per_page",
+													"value": "20"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "en_name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "area_code",
+													"value": "20",
+													"type": "text"
+												},
+												{
+													"key": "latitude",
+													"value": "12.00000",
+													"type": "text"
+												},
+												{
+													"key": "longitude",
+													"value": "10.00000",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/panel/provinces",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"provinces"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "en_name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "area_code",
+													"value": "20",
+													"type": "text"
+												},
+												{
+													"key": "latitude",
+													"value": "12.00000",
+													"type": "text"
+												},
+												{
+													"key": "longitude",
+													"value": "10.00000",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/panel/provinces/:province_id",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"provinces",
+												":province_id"
+											],
+											"variable": [
+												{
+													"id": "5afc6fa9-d45c-4cd2-9a3a-afcdfa8733cc",
+													"key": "province_id",
+													"value": "1",
+													"type": "string"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Destroy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/provinces/:province_id",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"provinces",
+												":province_id"
+											],
+											"variable": [
+												{
+													"id": "5ee15d40-7111-4590-84ff-7bbc52633ae3",
+													"key": "province_id",
+													"value": "1",
+													"type": "string"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "County",
+							"item": [
+								{
+									"name": "List",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/counties?per_page=20",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"counties"
+											],
+											"query": [
+												{
+													"key": "per_page",
+													"value": "20"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "province_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "en_name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "latitude",
+													"value": "12.00000",
+													"type": "text"
+												},
+												{
+													"key": "longitude",
+													"value": "10.00000",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/panel/counties",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"counties"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "province_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "en_name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "latitude",
+													"value": "12.00000",
+													"type": "text"
+												},
+												{
+													"key": "longitude",
+													"value": "10.00000",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/panel/counties/:county_id",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"counties",
+												":county_id"
+											],
+											"variable": [
+												{
+													"key": "county_id",
+													"value": "",
+													"type": "string"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Destroy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/counties/:county_id",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"counties",
+												":county_id"
+											],
+											"variable": [
+												{
+													"key": "county_id",
+													"value": "",
+													"type": "string"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "City",
+							"item": [
+								{
+									"name": "List",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/cities?per_page=20",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"cities"
+											],
+											"query": [
+												{
+													"key": "per_page",
+													"value": "20"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "province_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "county_id",
+													"value": "100",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "en_name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "latitude",
+													"value": "12.00000",
+													"type": "text"
+												},
+												{
+													"key": "longitude",
+													"value": "10.00000",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/panel/cities",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"cities"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "province_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "county_id",
+													"value": "100",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "en_name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "latitude",
+													"value": "12.00000",
+													"type": "text"
+												},
+												{
+													"key": "longitude",
+													"value": "10.00000",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/panel/cities/:city_id",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"cities",
+												":city_id"
+											],
+											"variable": [
+												{
+													"key": "city_id",
+													"value": "",
+													"type": "string"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Destroy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/cities/:city_id",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"cities",
+												":city_id"
+											],
+											"variable": [
+												{
+													"key": "city_id",
+													"value": "",
+													"type": "string"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Acl",
+					"item": [
+						{
+							"name": "Role",
+							"item": [
+								{
+									"name": "List of Roles",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/roles",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"roles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Store New Role",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "label",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "title",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "this is test description",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/panel/roles",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"roles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update a Role",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "label",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "title",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "this is test description",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/panel/roles",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"roles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Permissions of Role List",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/roles/1/permissions",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"roles",
+												"1",
+												"permissions"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Destroy Role",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/roles/:role_id",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"roles",
+												":role_id"
+											],
+											"variable": [
+												{
+													"key": "role_id",
+													"value": "4",
+													"type": "string"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Permission",
+							"item": [
+								{
+									"name": "List of Permissions",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}/panel/permissions",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"panel",
+												"permissions"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "List of Users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/panel/users?per_page=10&=",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"users"
+									],
+									"query": [
+										{
+											"key": "per_page",
+											"value": "10"
+										},
+										{
+											"key": "",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Info",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/panel/users/:user_id/info",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"users",
+										":user_id",
+										"info"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "4",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Role Sync",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "role",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/panel/users/:user_id/role",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"users",
+										":user_id",
+										"role"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete A User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/panel/users/5",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"users",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update A User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "MostafaGh",
+											"type": "text"
+										},
+										{
+											"key": "family",
+											"value": "GholamiM",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "09365895521",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "Mostafagholamidev1@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/panel/users/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Store New User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "mostafa7",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "MostafaGh",
+											"type": "text"
+										},
+										{
+											"key": "family",
+											"value": "GholamiM",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "09365895527",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "Mostafagholamidev7@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "secret",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/panel/users",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Admin Login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "mostafa",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "secret",
+											"type": "text"
+										},
+										{
+											"key": "recaptcha",
+											"value": "03AOLTBLTplJC1E27xpuzcq76OqVkCz7YXN0YH4ZWoppCHYivNvUcqCCl64NHMBgguSYOLyhjZexQPApzqn4jdmYYYDR9LlibJj1_KdnJfBtuZpqRg_phssjQgcDQLYKayEzkunChgv-DRdwfh0OEzUBJ8o_QeeoSIGUXXB4VJkudDXakkWmIqw97lsbElYZd-USiUuSlQkEgfJOczMBKbc3iGQwl8QBDMeH0NbqfVo_TiEXW_i-WE_AiNYneJ-KhjVmDenkFlKJedCsLF962Pt6_aOFFtzkIIlM8idB3K2rcMWv7-WUgxj8E_iIpWzYtiBJBYMjqQlO9ealLC1MFiSzYA6NjMG-8H5O7AnNjO7-vjduOBVw0t1KRIk5pbwnFVFTpQVrGbJcfCL8VIgnw0FE8thPg6QTS7SB0uy7y3cIXf-sdYlZGxYjE",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/panel/auth/login",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Info",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/panel/auth/user",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"auth",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/panel/auth/logout",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"panel",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	]
+}
